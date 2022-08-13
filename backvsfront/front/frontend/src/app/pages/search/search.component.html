@@ -1,0 +1,18 @@
+<p>technology works!</p>
+<div *ngFor="let item of technology">
+
+    <h1>{{item.name|uppercase}} <small>{{item.createdAt|date:"y"}}</small></h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="item.logo" [alt]="item.name">
+            <br>
+            <a [routerLink]="['/technologies']" class="btn btn-outline-danger btn-block">go back</a>
+        </div>
+        <div class="col-md-8">
+            <h3>{{item.name}}</h3>
+            <hr>
+            <p>{{item.description}}</p>
+        </div>
+    </div>
+</div>
